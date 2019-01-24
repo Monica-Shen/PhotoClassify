@@ -1,0 +1,119 @@
+body {
+    background-image: url("../img/menu_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height:800px;
+
+}
+#menu_frame{
+    width: 400px;
+    height: 400px;
+    padding: 13px;
+     position: absolute;
+    left:20%;
+    top: 60%;
+    margin-left: -200px;
+    margin-top: -200px;
+
+    opacity: 0.8;
+    border-radius: 10px;
+
+}
+#bu_photo{
+
+ font-size: 25px;
+     font-family: 'Architects Daughter', cursive;
+
+    width: 200px;
+    height: 70px;
+    line-height: 28px;
+    text-align: center;
+
+    opacity: 0.6;
+    color: white;
+    background-color: #ff5722;
+    border-radius: 10px;
+    border: 0;
+     margin-left: 60px;
+    float:left;
+}
+#bu_takephotos{
+
+    font-family: 'Architects Daughter', cursive;
+    font-size: 25px;
+    width: 200px;
+    height: 70px;
+    line-height: 28px;
+    text-align: center;
+
+    opacity: 0.6;
+    color: white;
+    background-color: orangered;
+    border-radius: 10px;
+    border: 0;
+     margin-left: 60px;
+    float:left;
+    margin-top: 80px;
+}
+#webName{
+    padding-left: 20px;
+
+}
+#ourname{
+    margin-top: 20px!important;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 50px;
+
+}
+#showCode{
+    width: 600px;
+    height: 600px;
+    background-color: #aed581c  ;
+   position: absolute;
+    left:40%;
+    top: 20%;
+    border-radius: 10px;
+    opacity: 0.6;
+}
+#p_showCode_name{
+    text-align: center;
+    font-size:30px;
+    margin-top: 10px !important;
+   font-family: 'Shadows Into Light', cursive;
+    font-family: 'Pacifico', cursive;
+}
+#p_showCode{
+    margin-left: 20px;
+    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Pacifico', cursive;
+}
+.preview_box img {
+  width: 200px;
+}
+
+#img_input{
+  display: none;
+}
+#img_label{
+  font-size: 25px;
+     font-family: 'Architects Daughter', cursive;
+
+    width: 200px;
+    height: 70px;
+    line-height: 28px;
+    text-align: center;
+    opacity: 0.6;
+    color: white;
+    background-color: #ff5722;
+    border-radius: 10px;
+    border: 0;
+     margin-left: 60px;
+    float:left;
+  display: inline-block;
+}
+
+#preview_box img {
+  width: 200px;
+    margin-top: 500px;
+    margin-left: 100px;
+}

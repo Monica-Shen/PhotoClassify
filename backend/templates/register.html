@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/register.css"/>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+</head>
+
+<body>
+<div id="div_register">
+    <a id="a_login" href="login.html">HAVE A ACCOUNT ? log in now</a>
+</div>
+<p id="p_name">
+    Web Painter
+</p>
+<div id="register_frame">
+
+
+
+    <form method="post" action="register.js">
+
+        <p><input type="text" placeholder="username" id="re_username" /></p>
+        <p><input type="password" placeholder="key" id="re_password" /></p>
+        <p><input type="password" placeholder="confirm password" id="re_passwordagain"></p>
+        <p><input type="email" placeholder="email" id="re_email"/></p>
+        <div id="register_control">
+            <input type="button" id="btn_register" value="register " />
+            <br/>
+            <br/>
+        </div>
+        <script>
+            $(document).on("click",'#btn_register',function () {
+                     var p=document.getElementById('re_password').value;
+                     var u=document.getElementById('re_username').value;
+                     var pa=document.getElementById('re_passwordagain').value;
+                     var e=document.getElementById('re_email').value;
+                $.ajax({
+                    type: 'POST',
+                    url: "",
+                    data: {
+                            're_username':u,
+                            're_password':p,
+                            're_passwordagain':pa,
+                            're_email':e,
+                        'csrfmiddlewaretoken': '{{ csrf_token }}'
+                    },
+                    success:function (data) {
+                        alert(data);
+                    }
+                })
+            })
+        </script>
+    </form>
+
+</div>
+
+<div id="webName">
+    <p id="ourname">
+        @OLD SHEN AND HER LADIES,THANKS FOR YOUR USING
+    </p>
+
+</div>
+
+
+</body>
+</html>

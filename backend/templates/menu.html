@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/menu.css"/>
+      <script src="../static/vendor/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="menu_frame">
+    <form>
+
+       <input id="img_input" type="file" accept="image/*"/>
+                            <label for="img_input" id="img_label"> choose photo
+                  <i class="fa fa-plus fa-lg"></i></label>
+        <p><input type="button"  value="take photos" id="bu_takephotos" /></p>
+        <p><input type="button"  value="take a look" id="bu_look" /></p>
+
+    </form>
+</div>
+<script>
+                $(document).on("click",'#bu_look',function () {
+                $.ajax({
+                    type: 'POST',
+                    url: "code",
+                    data: {'hello':"world",
+                        'csrfmiddlewaretoken': '{{ csrf_token }}'
+                    },
+                    success:function (data) {
+
+   var  result = data;
+
+    {#var showDiv = document.createElement("p");#}
+    {#console.log(showDiv);#}
+    {#showDiv.innerHTML = result;#}
+    {#document.body.appendChild(showDiv);#}
+    {#showDiv.classList.add("hello");#}
+    var showCode=document.getElementById('p_showCode');
+    console.log(showCode);
+    showCode.innerText=result;
+                    }
+                })
+            })
+            </script>
+<script>
+
+    $(document).on("click",'#img_input',function (e) {
+                    var file = e.target.files[0]; //获取图片资源
+
+  // 只选择图片文件
+  if (!file.type.match('image.*')) {
+    return false;
+  }
+
+  var reader = new FileReader();
+
+  reader.readAsDataURL(file); // 读取文件
+
+  // 渲染文件
+  reader.onload = function(arg) {
+
+    {#var img = '<img class="preview" src="' + arg.target.result + '" alt="preview"/>';#}
+    $("#preview_box").empty().append(img);
+  }
+
+                $.ajax({
+                    type: 'POST',
+                    url: "img",
+                    data: {'hello':"world",
+                        'csrfmiddlewaretoken': '{{ csrf_token }}'
+                    },
+                    success:function (data) {
+                        alert(data);
+
+                    }
+                })
+ })
+</script>
+
+
+<div id="webName">
+    <p id="ourname">
+        WEB PAINTER
+    </p>
+</div>
+
+<div id="showCode">
+    <p id="p_showCode_name">code</p>
+    <p id="p_showCode"></p>
+</div>
+<script>
+{#    获取数据并显示在页面上  #}
+{#    利用ajax或者fetch    #}
+    var url = ""; // 请求地址
+    {#var result = fetch(url).then(function (response) {  // 获取数据#}
+    {#    return response.json();#}
+
+   var  result = "hello";
+
+    {#var showDiv = document.createElement("p");#}
+    {#console.log(showDiv);#}
+    {#showDiv.innerHTML = result;#}
+    {#document.body.appendChild(showDiv);#}
+    {#showDiv.classList.add("hello");#}
+    var showCode=document.getElementById('p_showCode');
+    console.log(showCode);
+    showCode.innerText=result;
+
+
+</script>
+<div id="preview_box"></div>
+</body>
+</html>

@@ -14,7 +14,7 @@ DATA_DIM = 224
 THREAD = 8
 BUF_SIZE = 102400
 
-DATA_DIR = '../../indoor_67'
+DATA_DIR = ''
 
 img_mean = np.array([0.485, 0.456, 0.406]).reshape((3, 1, 1))
 img_std = np.array([0.229, 0.224, 0.225]).reshape((3, 1, 1))
@@ -97,9 +97,9 @@ def distort_color(img):
 
 
 def process_image(sample, mode, color_jitter, rotate):
-	img_path = sample[0]
-
+	img_path = sample
 	img = Image.open(img_path)
+	print(img.size)
 	if mode == 'train':
 		if rotate: img = rotate_image(img)
 		img = random_crop(img, DATA_DIM)
@@ -122,7 +122,7 @@ def process_image(sample, mode, color_jitter, rotate):
 	if mode == 'train' or mode == 'val':
 		return img, sample[1]
 	elif mode == 'test':
-		return [img], sample[1]
+		return [img]
 
 
 def _reader_creator(file_list,
@@ -163,10 +163,11 @@ def _reader_creator(file_list,
 					yield img_path, int(label)
 				elif mode == 'test':
                     #img_path = os.path.join(data_dir, line)
-					img_path, label = line.split('\t')
+					#img_path, label = line.split('\t')
+					img_path = line
 					img_path = img_path.replace("JPEG", "jpeg")
 					img_path = os.path.join(data_dir, img_path)
-					yield img_path, int(label)
+					yield img_path
 
 	mapper = functools.partial(
 		process_image, mode=mode, color_jitter=color_jitter, rotate=rotate)

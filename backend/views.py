@@ -39,6 +39,10 @@ def upload_action(request):
             return HttpResponse("failure!")
         imgdir = result['path']
         type = result['type']
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        s = os.path.abspath(os.path.join(os.getcwd(), "../.."))
+        print(s)
+        return render(request, 'upload_action.html', {'img_path':'../'+ img.name, 'class_result':type})
         #写入数据库
         # result = phom.photoAdd('', img.name, type)
         # if result['status']:

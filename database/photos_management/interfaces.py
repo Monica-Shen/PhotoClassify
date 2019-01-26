@@ -14,20 +14,24 @@ from backend.models import *
 
 #接口1：增加照片 输入：账户id，照片文件名，照片分类
 #返回内容包括：注册操作信息状态码，注册操作信息内容，账户id
-def photoRegister(userID, photoName, phoType):
-    select_result = Photo.objects.filter(webPage_account_id=userID).count()
+def photoAdd(userID, photoName, phoType):
+    select_result = Photo.objects.filter(photo_account_id=userID, photo_type=phoType)
     userID_rt = ''
     content_rt = ''
-    if (select_result>100):
-        #已达可创建网页最大数
-        status = False
-        content_rt = 'Webs are enough!'
-    else:
-        #注册网页成功
-        the_model = Photo(webPage_account_id=userID)
+    if select_result:
+        #已创建该用户对该图片类别的记录，直接在photo后增加新加入的图片名字
+        the_model = select_result[0]
+        the_model.photo_photo += photoName
         the_model.save()
         status = True
-        content_rt = "register success!"
+        content_rt = 'photo add successfully!'
+        userID_rt = userID
+    else:
+        #注册网页成功
+        the_model = Photo(photo_account_id=userID, photo_type=phoType, photo_photo=photoName)
+        the_model.save()
+        status = True
+        content_rt = "photo register success!"
         userID_rt = userID
 
     result_dict = {

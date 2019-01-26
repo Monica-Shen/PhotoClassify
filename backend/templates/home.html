@@ -1,276 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+	<title>主页</title>
+	<link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!--fonts-->
+		<link href='http://fonts.useso.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.useso.com/css?family=Lato:100,200,300,400,500,600,700,800,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>	
+	<!--//fonts-->
+		<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- for-mobile-apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Click On Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+		Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //for-mobile-apps -->
+	<!-- js -->
+		<script type="text/javascript" src="../static/js/jquery.min.js"></script>
+	<!-- js -->
+	<!-- start-smooth-scrolling -->
+		<script type="text/javascript" src="../static/js/move-top.js"></script>
+		<script type="text/javascript" src="../static/js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	<!-- start-smooth-scrolling -->
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Creative - Start Bootstrap Theme</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="../static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
-    <!-- Plugin CSS -->
-    <link href="../static/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="../static/css/creative.min.css" rel="stylesheet">
-
-  </head>
-
-  <body id="page-top">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">WEB PAINTER</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <header class="masthead text-center text-white d-flex">
-      <div class="container my-auto">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h1 class="text-uppercase">
-              <strong>Simplest web design !</strong>
-            </h1>
-            <hr>
-          </div>
-          <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">Web Painter can help you build better websites easily and conveniently! </p>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section class="bg-primary" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading text-white">We've got what you need!</h2>
-            <hr class="light my-4">
-            <p class="text-faded mb-4">Though you know nothing with html and scc,we can help you bulid your websites.Web Painter has everything you need to get your new website up and running in no time!</p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">At Your Service</h2>
-            <hr class="my-4">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fas fa-4x fa-gem text-primary mb-3 sr-icon-1"></i>
-              <h3 class="mb-3">Recommend Templates</h3>
-              <p class="text-muted mb-0">Our templates are recommended intelligently to you according to your design.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fas fa-4x fa-paper-plane text-primary mb-3 sr-icon-2"></i>
-              <h3 class="mb-3">Generate code</h3>
-              <p class="text-muted mb-0">You can only use your pen and paper to design the website !</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fas fa-4x fa-code text-primary mb-3 sr-icon-3"></i>
-              <h3 class="mb-3">Up to Date</h3>
-              <p class="text-muted mb-0">We update dependencies to keep things fresh.</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fas fa-4x fa-heart text-primary mb-3 sr-icon-4"></i>
-              <h3 class="mb-3">Made with Love</h3>
-              <p class="text-muted mb-0">You have to make your websites with love these days!</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="p-0" id="portfolio">
-      <div class="container-fluid p-0">
-        <div class="row no-gutters popup-gallery">
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="../static/img/portfolio/fullsize/1.jpg">
-              <img class="img-fluid" src="../static/img/portfolio/thumbnails/1.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="../static/img/portfolio/fullsize/2.jpg">
-              <img class="img-fluid" src="../static/img/portfolio/thumbnails/2.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="../static/img/portfolio/fullsize/3.jpg">
-              <img class="img-fluid" src="../static/img/portfolio/thumbnails/3.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="../static/img/portfolio/fullsize/4.jpg">
-              <img class="img-fluid" src="../static/img/portfolio/thumbnails/4.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="../static/img/portfolio/fullsize/5.jpg">
-              <img class="img-fluid" src="../static/img/portfolio/thumbnails/5.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="../static/img/portfolio/fullsize/6.jpg">
-              <img class="img-fluid" src="../static/img/portfolio/thumbnails/6.jpg" alt="">
-              <div class="portfolio-box-caption">
-                <div class="portfolio-box-caption-content">
-                  <div class="project-category text-faded">
-                    Category
-                  </div>
-                  <div class="project-name">
-                    Project Name
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-dark text-white">
-      <div class="container text-center">
-        <h2 class="mb-4">Free use at Web Painter!</h2>
-        <input class="btn btn-light btn-xl sr-button" value="log in" onclick="login()"/>
-          <script>
-                function login() {
-                    window.location.href="login.html";                }
-          </script>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Let's Get In Touch!</h2>
-            <hr class="my-4">
-            <p class="mb-5">Hava questions or more suggestions? Send us an email and we will get back to you as soon as possible!</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 ml-auto text-center">
-            <i class="fas fa-phone fa-3x mb-3 sr-contact-1"></i>
-            <p>123-456-6789</p>
-          </div>
-          <div class="col-lg-4 mr-auto text-center">
-            <i class="fas fa-envelope fa-3x mb-3 sr-con tact-2"></i>
-            <p>
-              <a>webpainter@gmail.com</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="../static/vendor/jquery/jquery.min.js"></script>
-    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="../static/vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="../static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="../static/js/creative.min.js"></script>
-
-  </body>
-
+</head>
+<body>
+<!-- banner -->
+<div class="banner">
+	<div class="container">
+		<div class="logo">
+			<a href="home.html"><img src="../static/img/2.jpg" alt=""/></a>
+		</div>
+		<div class="navigation">
+				<span class="menu"><img src="../static/img/menu.png" alt=""/></span>
+				<ul class="nav1">
+					<li><a href="about.html">关于我们</a></li>
+					<li><a href="login.html">登陆</a></li>
+					<li><a href="register.html">注册</a></li>
+					<li><a href="upload_img.html">上传照片</a></li>
+					<li><a href="gallery.html">我的相册</a></li>	
+					<li><a href="contact.html">联系我们</a></li>
+				</ul>
+				<!-- script for menu -->
+					<script> 
+						$( "span.menu" ).click(function() {
+						$( "ul.nav1" ).slideToggle( 300, function() {
+						 // Animation complete.
+						});
+						});
+					</script>
+				<!-- //script for menu -->
+			
+		</div>
+		<div class="banner-info text-center">
+			<h1>欢迎来到 <span>PhotoClassify</span></h1>
+			<p>照片分类器</p>
+</div>
+	</div>
+</div>
+<!-- //banner -->
+<!-- banner-bottom -->
+<div class="banner-bottom">
+	  <div class="container">
+		  <div class="bottom-header">
+				<h2>功能 <span>简介</span></h2>
+</div>
+		 <div class="bottom-grids">
+			 <div class="col-md-4 bottom-grid text-center">				
+					<div class="btm-info">
+						 <div class="hi-icon-wrap hi-icon-effect">
+							 <a href="#" class="hi-icon hi-icon-archive">Archive</a>
+						 </div>
+						<h3>照片分类</h3>
+						<p>我们将根据照片的室内场景对照片进行分类</p>
+					</div>
+		     </div>
+				<div class="col-md-4 bottom-grid text-center">	
+						<div class="hi-icon-wrap hi-icon-effect">
+							 <a href="#" class="hi-icon hi-icon-archive icon2">Archive</a>
+						 </div>
+						<div class="btm-info">
+							<h3>照片存储</h3>
+							<p>上传的照片将根据类别分别存放在"我的相册"中。您可以随时打开PhotoClassify查看。</p>
+						</div>					
+				</div>
+				<div class="col-md-4 bottom-grid text-center">	
+					 <div class="hi-icon-wrap hi-icon-effect">
+							 <a href="#" class="hi-icon hi-icon-archive icon3">Archive</a>
+						 </div>
+						<div class="btm-info">
+							<h3>素材宝库</h3>
+							<p>可以利用PhotoClassify记录您的足迹，形成您丰富的室内场景素材宝库。</p>
+					   </div>
+				</div>
+				<div class="clearfix"></div>
+		   </div>
+	 </div>
+</div>
+<!-- //banner-bottom -->
+<div class="copyrights">Collect from <a href="http://www.cssmoban.com/"  title="网站模板">网站模板</a></div>
+<!-- projects -->
+<div class="project"> </div>
+<!-- //projects -->
+<div class="flex-slider">
+				<ul id="flexiselDemo1">			
+					<li>
+						<div class="media">
+							<a href="gallery.html"><img src="../static/img/777.jpg" alt=""/></a>
+						</div>
+					</li>
+					<li>
+						<div class="media">
+							<a href="gallery.html"><img src="../static/img/888.jpg" alt=""/></a>
+						</div>
+					</li>
+					<li>
+						<div class="media">
+							<a href="gallery.html"><img src="../static/img/999.jpg" alt=""/></a>
+						</div>
+					</li>
+					<li>
+						<div class="media">
+							<a href="gallery.html"><img src="../static/img/aaa.jpg" alt=""/></a>
+						</div>
+					</li>
+					<li>
+						<div class="media">
+							<a href="gallery.html"><img src="../static/img/sss.jpg" alt=""/></a>
+						</div>
+					</li>
+					<li>
+						<div class="media">
+							<a href="gallery.html"><img src="../static/img/a6.jpg" alt=""/></a>
+						</div>
+					</li>
+				</ul>
+            		<script type="text/javascript">
+							$(window).load(function() {
+								$("#flexiselDemo1").flexisel({
+									visibleItems: 5,
+									animationSpeed: 1000,
+									autoPlay:true,
+									autoPlaySpeed: 3000,    		
+									pauseOnHover: true,
+									enableResponsiveBreakpoints: true,
+									responsiveBreakpoints: { 
+										portrait: { 
+											changePoint:480,
+											visibleItems: 2
+										}, 
+										landscape: { 
+											changePoint:640,
+											visibleItems: 3
+										},
+										tablet: { 
+											changePoint:768,
+											visibleItems: 3
+										}
+									}
+								});
+								
+							});
+					</script>
+					<script type="text/javascript" src="../static/js/jquery.flexisel.js"></script>
+</div>
+<!-- slider --><!-- //slider -->
+<!-- get-notified --><!-- //get-notified -->
+<!-- contact -->
+<div class="olia-gozha">
+<div class="olia-right"> </div>
+	<div class="clearfix"></div>
+</div>
+<!-- //contact -->
+<!-- footer -->
+<div class="footer">
+	<div class="container">
+		<p>Copyright &copy; 2019.CNN Team.</p>
+	</div>
+</div>
+<!-- //footer -->
+</body>
 </html>
